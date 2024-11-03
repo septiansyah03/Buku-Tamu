@@ -109,3 +109,12 @@ tr:hover {
 .animate-fly {
     animation: flyAway 0.6s ease forwards; 
 }
+@media print {
+    /* Gaya untuk tampilan cetak */
+    body {
+        font-size: 12px; /* Contoh mengubah ukuran font */
+    }
+    .no-print {
+        display: none; /* Sembunyikan elemen tertentu saat mencetak */
+    }
+}
