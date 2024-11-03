@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buku Tamu</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container mt-5 text-center">
+        
+        <img src="LOGO_SEKOLAH.png" alt="Logo Sekolah" style="width: 100px; height: auto; margin-bottom: 10px;">
+        
+        <h1 class="text-center">Buku Tamu Digital</h1>
+        
+        
+        <h2 class="text-center" style="font-weight: 300; color: #395556;">SD Negeri Kota Bambu 01 Pagi</h2>
+
+        <form id="guestForm" class="mt-4">
+            <div class="mb-3">
+                <label for="date" class="form-label">Tanggal:</label>
+                <input type="date" class="form-control" id="date" required>
+            </div>
+            <div class="mb-3">
+                <label for="name" class="form-label">Nama Tamu:</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="purpose" class="form-label">Tamu Kedinasan/Umum:</label>
+                <select class="form-select" id="purpose" required>
+                    <option value="" disabled selected>--Pilih Tamu--</option>
+                    <option value="kedinasan">Kedinasan</option>
+                    <option value="umum">Umum</option>
+                </select>
+            </div>
+            <div id="kedinasanFields" style="display: none;">
+                <div class="mb-3">
+                    <label for="nip" class="form-label">NIP:</label>
+                    <input type="text" class="form-control" id="nip">
+                </div>
+                <div class="mb-3">
+                    <label for="position" class="form-label">Jabatan:</label>
+                    <input type="text" class="form-control" id="position">
+                </div>
+                <div class="mb-3">
+                    <label for="institution" class="form-label">Instansi:</label>
+                    <input type="text" class="form-control" id="institution">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="book" class="form-label">Tujuan Kunjungan:</label>
+                <textarea class="form-control" id="book" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+                Kirim <i class="fa fa-paper-plane" id="sendIcon"></i>
+            </button>
+        </form>
+
+        <div class="container mt-5">
+            <h2 class="mt-5">Daftar Tamu</h2>
+            <button id="toggleGuestList" class="btn btn-primary mb-3">
+                <i class="fa fa-eye" aria-hidden="true"></i> Lihat Daftar Tamu
+            </button>
+            
+            <table class="table table-striped mt-3 d-none" id="guestTable">
+                <thead>
+                    <tr>
+                        <th>Tanggal dan Waktu</th>
+                        <th>Nama Tamu</th>
+                        <th>Kedinasan/Umum</th>
+                        <th>NIP</th>
+                        <th>Jabatan</th>
+                        <th>Instansi</th>
+                        <th>Tujuan Kunjungan</th>
+                    </tr>
+                </thead>
+                <tbody id="guestTableBody">
+                    
+                </tbody>
+            </table>
+            
+            <div id="actionButtons" class="d-none">
+                <button id="printButton" class="btn btn-success mb-3">
+                    <i class="fa fa-print" aria-hidden="true"></i> Cetak Daftar Tamu
+                </button>
+                
+                <button id="resetDataButton" class="btn btn-danger mb-3">
+                    <i class="fa-solid fa-trash" aria-hidden="true"></i> Hapus Data
+                </button>
+            </div>
+        </div>              
+
+            </table>
+            
+        </div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+        <script>
+            document.getElementById("guestForm").addEventListener("submit", function(event) {
+                event.preventDefault(); 
+
+                var icon = document.getElementById("sendIcon");
+                icon.classList.add("animate-fly");
+
+                
+                icon.addEventListener("animationend", function() {
+                    icon.classList.remove("animate-fly");
+                    
+                });
+            });
+        </script>
+        <script src="assets/tamu.js"></script>
+        <script src="assets/script.js"></script>
+    </div>
+</body>
+</html>
+<div id="printSection" style="display: none;">
+    <div style="text-align: right;">
+        <h2>Daftar Tamu</h2>
+        <h2>SD Negeri Kota Bambu 01 Pagi</h2>
+        <table id="printGuestTable" border="1" style="width: 100%; border-collapse: collapse; margin-top: 20px;"></table>
+        <p style="margin-top: 20px;">Jakarta, <span id="printDate"></span></p>
+        
+        
+        <div style="text-align: center; margin-top: 20px;">
+            <p>Ka. SDN Kota Bambu 01 Pagi</p>
+            <p style="margin-top: 60px;">................</p> 
+            <p>NIP:................</p>
+        </div>
+    </div>
+</div>
