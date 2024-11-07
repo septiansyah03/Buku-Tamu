@@ -22,7 +22,7 @@
         <h1 class="text-center">Buku Tamu Digital</h1>
         
         
-        <h2 class="text-center" style="font-weight: 300; color: #395556;">SD Negeri Kota Bambu 01 Pagi</h2>
+        <h2 class="text-center" style="font-weight: 300; color: #a2c9ca;">SD Negeri Kota Bambu 01 Pagi</h2>
 
         <form id="guestForm" class="mt-4">
             <div class="mb-3">
@@ -31,7 +31,7 @@
             </div>
             <div class="mb-3">
                 <label for="name" class="form-label">Nama Tamu:</label>
-                <input type="text" class="form-control" id="name" required>
+                <input type="text" class="form-control" id="name" placeholder="Masukkan Nama Tamu" required>
             </div>
             <div class="mb-3">
                 <label for="purpose" class="form-label">Tamu Kedinasan/Umum:</label>
@@ -44,21 +44,22 @@
             <div id="kedinasanFields" style="display: none;">
                 <div class="mb-3">
                     <label for="nip" class="form-label">NIP:</label>
-                    <input type="text" class="form-control" id="nip">
+                    <input type="text" class="form-control" id="nip" placeholder="Masukkan NIP">
                 </div>
                 <div class="mb-3">
                     <label for="position" class="form-label">Jabatan:</label>
-                    <input type="text" class="form-control" id="position">
+                    <input type="text" class="form-control" id="position" placeholder="Masukkan Jabatan">
                 </div>
                 <div class="mb-3">
                     <label for="institution" class="form-label">Instansi:</label>
-                    <input type="text" class="form-control" id="institution">
+                    <input type="text" class="form-control" id="institution" placeholder="Masukkan Instansi">
                 </div>
             </div>
             <div class="mb-3">
                 <label for="book" class="form-label">Tujuan Kunjungan:</label>
-                <textarea class="form-control" id="book" rows="3" required></textarea>
+                <textarea class="form-control" id="book" rows="3" placeholder="Masukkan Tujuan Kunjungan" required></textarea>
             </div>
+        
             <button type="submit" class="btn btn-primary">
                 Kirim <i class="fa fa-paper-plane" id="sendIcon"></i>
             </button>
@@ -73,7 +74,7 @@
             <table class="table table-striped mt-3 d-none" id="guestTable">
                 <thead>
                     <tr>
-                        <th>Tanggal dan Waktu</th>
+                        <th>Tanggal</th>
                         <th>Nama Tamu</th>
                         <th>Kedinasan/Umum</th>
                         <th>NIP</th>
@@ -92,11 +93,12 @@
                     <i class="fa fa-print" aria-hidden="true"></i> Cetak Daftar Tamu
                 </button>
                 
-                <button id="resetDataButton" class="btn btn-danger mb-3">
+                <!-- Initially hide this button using d-none -->
+                <button id="resetDataButton" class="btn btn-danger mb-3 d-none">
                     <i class="fa-solid fa-trash" aria-hidden="true"></i> Hapus Data
                 </button>
             </div>
-        </div>              
+              
 
             </table>
             
@@ -118,7 +120,6 @@
             });
         </script>
         <script src="assets/tamu.js"></script>
-        <script src="assets/script.js"></script>
     </div>
 </body>
 </html>
