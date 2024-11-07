@@ -41,7 +41,7 @@ table {
 
 th {
     background-color: #007bff; /* Warna header tabel biru */
-    color: white;
+    color: #989ca0
     padding: 12px;
     text-align: left;
     border-top-left-radius: 8px; /* Membulatkan pojok kiri atas */
@@ -50,7 +50,7 @@ th {
 
 td {
     background-color: #6c757d; /* Sel tabel dengan warna lebih gelap */
-    color: #f8f9fa; /* Warna teks tabel terang */
+    color: #989ca0 /* Warna teks tabel terang */
     border: 1px solid #495057; /* Border tabel yang lebih gelap */
     padding: 12px;
     text-align: left;
