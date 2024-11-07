@@ -14,7 +14,7 @@ h1, h2 {
 
 .table th, .table td {
     font-family: 'Nunito Sans', sans-serif;
-    color: #f8f9fa; /* Warna teks tabel terang, pastikan agar kontras dengan latar belakang */
+    color: #6c757d; /* Warna teks tabel abu-abu gelap */
 }
 
 form {
@@ -41,7 +41,7 @@ table {
 
 th {
     background-color: #007bff; /* Warna header tabel biru */
-    color: #f8f9fa; /* Pastikan warna teks di header tabel tetap terang */
+    color: #ffffff; /* Teks header tetap putih agar kontras */
     padding: 12px;
     text-align: left;
     border-top-left-radius: 8px;
@@ -49,8 +49,8 @@ th {
 }
 
 td {
-    background-color: #6c757d; /* Sel tabel dengan warna lebih gelap */
-    color: #f8f9fa; /* Warna teks yang kontras dengan sel */
+    background-color: #6c757d; /* Sel tabel dengan warna abu-abu gelap */
+    color: #6c757d; /* Teks di dalam sel juga abu-abu gelap */
     border: 1px solid #495057;
     padding: 12px;
     text-align: left;
