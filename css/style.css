@@ -1,47 +1,47 @@
 body {
     font-family: 'Nunito Sans', sans-serif;
-    background-color: #343a40; /* Latar belakang gelap */
+    background-color: #343a40; 
     margin: 0;
     padding: 20px;
-    color: #f8f9fa; /* Warna teks terang */
+    color: #f8f9fa; 
 }
 
 h1, h2 {
-    color: #f8f9fa; /* Teks header terang */
+    color: #f8f9fa; 
     text-align: center;
     font-family: 'Nunito', sans-serif;
 }
 
 .table th, .table td {
     font-family: 'Nunito Sans', sans-serif;
-    color: #6c757d; /* Warna teks tabel abu-abu gelap */
+    color: #6c757d; 
 }
 
 form {
-    background-color: #495057; /* Form dengan latar belakang gelap dan lebih soft */
+    background-color: #495057;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
     margin-bottom: 30px;
-    border: 1px solid #6c757d; /* Border yang lebih soft agar kontras tetap enak dilihat */
+    border: 1px solid #6c757d; 
 }
 
 label {
     font-weight: bold;
-    color: #f8f9fa; /* Warna label lebih terang agar kontras */
+    color: #f8f9fa; 
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    background-color: #495057; /* Tabel dengan latar belakang gelap */
-    border-radius: 8px; /* Border rounded pada tabel */
+    background-color: #495057; 
+    border-radius: 8px; 
 }
 
 th {
-    background-color: #007bff; /* Warna header tabel biru */
-    color: #ffffff; /* Teks header tetap putih agar kontras */
+    background-color: #007bff; 
+    color: #ffffff;
     padding: 12px;
     text-align: left;
     border-top-left-radius: 8px;
@@ -49,8 +49,8 @@ th {
 }
 
 td {
-    background-color: #6c757d; /* Sel tabel dengan warna abu-abu gelap */
-    color: #6c757d; /* Teks di dalam sel juga abu-abu gelap */
+    background-color: #6c757d; 
+    color: #6c757d; 
     border: 1px solid #495057;
     padding: 12px;
     text-align: left;
@@ -58,12 +58,12 @@ td {
 }
 
 tr:hover {
-    background-color: #545b62; /* Efek hover baris tabel lebih lembut */
+    background-color: #545b62; 
 }
 
 .btn-view {
     display: inline-block;
-    background-color: #007bff; /* Tombol biru */
+    background-color: #007bff; 
     color: white;
     padding: 10px 20px;
     border: none;
@@ -75,11 +75,11 @@ tr:hover {
 }
 
 .btn-view:hover {
-    background-color: #0056b3; /* Hover efek tombol */
+    background-color: #0056b3; 
 }
 
 .swal-title {
-    color: #007bff; /* Warna judul SweetAlert */
+    color: #007bff; 
 }
 
 @keyframes fadeInUp {
@@ -95,9 +95,9 @@ tr:hover {
 
 #guestForm {
     animation: fadeInUp 1s ease-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow lebih gelap */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
     border-radius: 8px;
-    background-color: #495057; /* Background form gelap */
+    background-color: #495057; 
     padding: 20px;
     margin-top: 50px;
 }
@@ -119,4 +119,26 @@ tr:hover {
 
 .animate-fly {
     animation: flyAway 0.6s ease forwards;
+}
+
+@media print {
+    
+    .table th, .table td {
+        color: #000000; 
+    }
+
+   
+    .table th, .table td {
+        background-color: transparent !important; 
+    }
+
+    
+    .table td, .table th {
+        border: none !important; 
+    }
+
+    
+    .btn, #actionButtons {
+        display: none !important;
+    }
 }
