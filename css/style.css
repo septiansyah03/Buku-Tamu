@@ -10,31 +10,34 @@ h1, h2 {
     color: #f8f9fa; 
     text-align: center;
     font-family: 'Nunito', sans-serif;
+    font-size: 24px; /* Adjusted for smaller header size */
 }
 
 .table th, .table td {
     font-family: 'Nunito Sans', sans-serif;
     color: #6c757d; 
+    font-size: 14px; /* Reduced font size for table text */
 }
 
 form {
     background-color: #495057;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Smaller box shadow */
+    padding: 15px; /* Reduced padding */
+    margin-bottom: 20px; /* Reduced margin-bottom */
     border: 1px solid #6c757d; 
 }
 
 label {
     font-weight: bold;
     color: #f8f9fa; 
+    font-size: 14px; /* Reduced label font size */
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 15px; /* Reduced margin-top */
     background-color: #495057; 
     border-radius: 8px; 
 }
@@ -42,19 +45,21 @@ table {
 th {
     background-color: #007bff; 
     color: #ffffff;
-    padding: 12px;
+    padding: 10px; /* Reduced padding */
     text-align: left;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    font-size: 14px; /* Adjusted for smaller table header text */
 }
 
 td {
     background-color: #f7f9fb; 
     color: #6c757d; 
     border: 1px solid #495057;
-    padding: 12px;
+    padding: 8px; /* Reduced padding */
     text-align: left;
     border-bottom: 1px solid #495057;
+    font-size: 14px; /* Reduced font size for table data */
 }
 
 tr:hover {
@@ -65,13 +70,14 @@ tr:hover {
     display: inline-block;
     background-color: #007bff; 
     color: white;
-    padding: 10px 20px;
+    padding: 8px 16px; /* Reduced padding */
     border: none;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 8px; /* Reduced margin-top */
+    font-size: 14px; /* Reduced button font size */
 }
 
 .btn-view:hover {
@@ -98,8 +104,8 @@ tr:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
     border-radius: 8px;
     background-color: #495057; 
-    padding: 20px;
-    margin-top: 50px;
+    padding: 15px; /* Reduced padding */
+    margin-top: 40px; /* Reduced margin-top */
 }
 
 @keyframes flyAway {
@@ -122,22 +128,18 @@ tr:hover {
 }
 
 @media print {
-    
     .table th, .table td {
         color: #000000; 
     }
 
-   
     .table th, .table td {
         background-color: transparent !important; 
     }
 
-    
     .table td, .table th {
         border: none !important; 
     }
 
-    
     .btn, #actionButtons {
         display: none !important;
     }
